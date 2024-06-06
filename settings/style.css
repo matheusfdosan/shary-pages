@@ -1,0 +1,561 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --Light-Blue: #3b82f6;
+  --Dark-Blue: #234c90;
+  --Dark: #353535;
+  --White: #ffffff;
+  --Gray: #ebeef3;
+  --Grayish-Blue: #9fabb2;
+  --Sora: "Sora", serif;
+  --Inter: "Inter", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100vh;
+  font-family: var(--Inter);
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+/* Default Settings */
+.container {
+  width: 90%;
+  max-width: 100rem;
+  margin: auto;
+}
+
+/* Header */
+header {
+  width: 100%;
+  border-bottom: 0.2rem solid var(--Gray);
+}
+
+header > .container {
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header > .container > h1 {
+  font-family: var(--Sora);
+  font-size: 3rem;
+  background-image: linear-gradient(
+    to left,
+    var(--Dark-Blue),
+    var(--Light-Blue)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header > .container > div {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#search {
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--Gray);
+  padding: 0.5rem;
+}
+
+#search-input {
+  font-family: var(--Inter);
+  font-size: 1.6rem;
+  min-width: 30rem;
+  height: 3rem;
+  padding-left: 1rem;
+  border: none;
+  background-color: var(--Gray);
+}
+
+#search-input::selection {
+  background-color: #93baf880;
+}
+
+#search ion-icon {
+  font-weight: 900;
+  font-size: 2.5rem;
+  padding: 0rem 1rem;
+  cursor: pointer;
+  color: #234c90;
+}
+
+#search-mobile {
+  display: none;
+}
+
+header > .container > div > img {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  border: 0.2rem solid transparent;
+  transition: border 200ms ease;
+}
+
+header > .container > div > img:hover {
+  border: 0.2rem solid var(--Light-Blue);
+}
+
+/* Lateral bar */
+#main-content {
+  width: 100%;
+  height: 86%;
+  display: flex;
+}
+
+aside {
+  width: 30%;
+  min-width: 23.6rem;
+  border-right: 0.2rem solid var(--Gray);
+}
+
+aside > ul {
+  margin: 3rem auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+}
+
+aside > button {
+  display: none;
+}
+
+aside > ul > li > a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  color: var(--Dark);
+  transition: background-color 300ms ease;
+}
+
+aside > ul > li > a:hover {
+  background-color: var(--Gray);
+}
+
+aside > ul > li > a > ion-icon {
+  color: var(--Dark);
+}
+
+#main-content > aside > ul > li:nth-child(4) > a {
+  background-color: var(--Light-Blue);
+  color: #fff;
+}
+
+#main-content > aside > ul > li:nth-child(4) > a > ion-icon {
+  color: var(--White);
+}
+
+/* Main content */
+main {
+  width: 80%;
+  padding: 3rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: var(--Gray);
+}
+
+main::-webkit-scrollbar {
+  width: 1rem;
+  background-color: var(--White);
+}
+
+main::-webkit-scrollbar-thumb {
+  background-color: var(--Grayish-Blue);
+  border: 0.2rem solid var(--White);
+  border-radius: 1rem;
+}
+main #container h2 {
+  color: var(--Dark);
+}
+
+main #container {
+  background-color: var(--White);
+  width: 100%;
+  height: fit-content;
+  padding: 2rem;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+#edit-account {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#edit-account h3 {
+  color: var(--Dark);
+}
+
+label > p {
+  margin-bottom: 0.5rem;
+  color: var(--Dark);
+}
+
+label > input {
+  height: 4rem;
+  padding-left: 1rem;
+  font-family: var(--Inter);
+  font-size: 1.6rem;
+  width: 30rem;
+  border-radius: 1rem;
+  border: 1px solid var(--Grayish-Blue);
+}
+
+label > select {
+  height: 4.4rem;
+  padding: 1rem;
+  font-family: var(--Inter);
+  font-size: 1.6rem;
+  width: fit-content;
+  border-radius: 1rem;
+  border: 1px solid var(--Grayish-Blue);
+  cursor: pointer;
+}
+
+label[for="profile-picture-input"],
+label[for="background-input"] {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+label[for="profile-picture-input"] > img {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 1rem;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+label[for="profile-picture-input"] > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--Light-Blue);
+  color: var(--White);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+label[for="profile-picture-input"] > div:hover {
+  background-color: var(--Dark-Blue);
+}
+
+label[for="profile-picture-input"] > div > ion-icon {
+  color: var(--White);
+}
+
+label[for="background-input"] {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: var(--Light-Blue);
+  color: var(--White);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  width: fit-content;
+}
+
+label[for="background-input"]:hover {
+  background-color: var(--Dark-Blue);
+}
+
+label[for="background-input"] > p {
+  margin: 0;
+  color: var(--White);
+}
+
+label[for="background-input"] > ion-icon {
+  color: var(--White);
+}
+
+/* Account settings */
+#account-settings h3 {
+  margin-bottom: 2rem;
+  color: var(--Dark);
+}
+
+#buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+#buttons button {
+  font-family: var(--Inter);
+  font-size: 1.6rem;
+  padding: 1rem;
+  border: none;
+  color: var(--White);
+  background-color: var(--Light-Blue);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: filter 200ms ease;
+}
+
+#buttons button:last-child {
+  background-color: #f12a2a;
+}
+
+#buttons button:last-child:hover {
+  filter: drop-shadow(0px 0px 4px #f12a2a);
+}
+
+#buttons button:hover {
+  filter: drop-shadow(0px 0px 4px var(--Light-Blue));
+}
+
+@media (max-width: 830px) {
+  main {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 720px) {
+  #search-mobile {
+    display: block;
+  }
+
+  #search-mobile {
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--Gray);
+    padding: 0.5rem;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  #search-input-mobile {
+    min-width: 0;
+    max-width: 100%;
+    font-family: var(--Inter);
+    font-size: 1.6rem;
+    width: 100%;
+    height: 3rem;
+    padding-left: 1rem;
+    border: none;
+    background-color: var(--Gray);
+  }
+
+  #search-input-mobile::selection {
+    background-color: #93baf880;
+  }
+
+  #mobile-search-icon {
+    font-weight: 900;
+    font-size: 2.5rem;
+    padding: 0rem 1rem;
+    cursor: pointer;
+    color: #234c90;
+    width: 2.4rem;
+  }
+
+  #search {
+    display: none;
+  }
+
+  main {
+    width: 95%;
+  }
+
+  .post > #post-header > img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .post > img {
+    height: 25rem;
+  }
+
+  aside {
+    width: 5rem;
+    min-width: 5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    transition: width 500ms ease;
+  }
+
+  aside > ul {
+    display: none;
+  }
+
+  aside > button {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    padding-top: 1rem;
+    cursor: pointer;
+  }
+
+  aside > button:hover {
+    filter: drop-shadow(0 0 0.5rem var(--Light-Blue));
+  }
+
+  .aside.active {
+    z-index: 2;
+    width: 100%;
+  }
+
+  .aside.active > ul {
+    display: block;
+  }
+
+  .aside.active > button {
+    display: none;
+  }
+
+  .aside.active ~ main {
+    display: none;
+  }
+
+  /* Modal comments */
+  .modal-comments.active {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--White);
+    overflow-y: scroll;
+  }
+
+  .modal-comments.active::-webkit-scrollbar {
+    width: 1rem;
+    background-color: var(--White);
+  }
+
+  .modal-comments.active::-webkit-scrollbar-thumb {
+    background-color: var(--Grayish-Blue);
+    border: 0.2rem solid var(--White);
+    border-radius: 1rem;
+  }
+
+  #close {
+    width: 95%;
+    padding: 2rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #close > ion-icon {
+    font-size: 3.5rem;
+    cursor: pointer;
+  }
+
+  #comments-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .comment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.8rem;
+    padding: 0.5rem 0;
+  }
+
+  .comment > img {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 100%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  #username {
+    color: var(--Dark);
+    font-weight: bold;
+  }
+
+  .comment p {
+    font-size: 1.6rem;
+    padding-left: 1rem;
+    width: 70%;
+  }
+
+  #close-bar {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 480px) {
+
+  main {
+    padding: 0;
+  }
+
+  main #container {
+    border-radius: 0;
+  }
+
+  #edit-account > label:nth-child(2) {
+    display: block;
+  }
+
+  #edit-account > label:nth-child(2) > div {
+    width: fit-content;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+  }
+
+  #edit-account > label:nth-child(2) > div > ion-icon {
+    display: none;
+  }
+
+  label[for="profile-picture-input"] > img {
+    width: 9rem;
+    height: 9rem;
+  }
+
+  #edit-account > label:nth-child(3) > input[type=text] {
+    width: 17rem;
+  }
+
+  #buttons {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="../assets/logo.svg" type="image/x-icon" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js" defer></script>
+    <title>Shary - Configurações</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Shary</h1>
+
+        <div>
+          <div id="search">
+            <input
+              type="text"
+              name="search"
+              id="search-input"
+              placeholder="Pesquisar..."
+            />
+            <ion-icon name="search-outline"></ion-icon>
+          </div>
+
+          <img
+            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="profile-picture"
+            title="Rayssa Kely"
+          />
+        </div>
+      </div>
+      <div id="search-mobile">
+        <input
+          type="text"
+          name="search"
+          id="search-input-mobile"
+          placeholder="Pesquisar..."
+        />
+        <ion-icon name="search-outline" id="mobile-search-icon"></ion-icon>
+      </div>
+    </header>
+
+    <div id="main-content">
+      <aside class="aside">
+        <button><ion-icon name="chevron-forward-outline"></ion-icon></button>
+
+        <ul>
+          <li>
+            <a href="../homepage/index.html">
+              <ion-icon name="home-outline"></ion-icon>
+              Página inicial
+            </a>
+          </li>
+
+          <li>
+            <a href="../user-profile/index.html ">
+              <ion-icon name="people-outline"></ion-icon>
+              Perfil
+            </a>
+          </li>
+
+          <li>
+            <a href="../create-post/index.html">
+              <ion-icon name="add-circle-outline"></ion-icon>
+              Fazer publicação
+            </a>
+          </li>
+
+          <li>
+            <a href="../settings/index.html">
+              <ion-icon name="settings-outline"></ion-icon>
+              Configurações
+            </a>
+          </li>
+
+          <li id="close-bar">
+            <a>
+              <ion-icon name="exit-outline"></ion-icon>
+              Fechar barra lateral
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <main>
+        <div id="container">
+          <h2>Configurações</h2>
+
+          <div id="edit-account">
+            <h3>Editar perfil</h3>
+
+            <label for="profile-picture-input">
+              <img
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="profile-picture"
+                title="Rayssa Kely"
+              />
+
+              <div>
+                <p>Mudar foto de perfil</p>
+                <ion-icon name="cloud-upload-outline"></ion-icon>
+              </div>
+
+              <input
+                type="file"
+                id="profile-picture-input"
+                name="profile-picture"
+                hidden
+              />
+            </label>
+
+            <label for="name">
+              <p>Nome</p>
+              <input type="text" value="Rayssa Kely" readonly />
+            </label>
+
+            <label for="gender-input">
+              <p>Gênero</p>
+              <select name="gender" id="gender-input">
+                <option>Masculino</option>
+                <option>Feminino</option>
+                <option>Prefiro não dizer</option>
+              </select>
+            </label>
+          </div>
+
+          <div id="account-settings">
+            <h3>Configurações de Conta</h3>
+            <div id="buttons">
+              <button>Sair da conta</button>
+              <button>Mudar senha</button>
+              <button>Deletar conta</button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <!-- 
+      ╱|、
+    (˚ˎ 。7  
+    |、˜〵          
+    じしˍ,)ノ
+  -->
+</html>
