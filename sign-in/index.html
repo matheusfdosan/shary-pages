@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="../assets/logo.svg" type="image/x-icon" />
+    <title>Shary - Login</title>
+  </head>
+  <body>
+    <main>
+      <form action="/login" method="post">
+        <div id="container">
+          <div id="logo">Shary</div>
+          <h1>Comece agora!</h1>
+          <p>Bem-vindo de volta! Preencha com dados para começar.</p>
+
+          <div id="sign-in-fields">
+            <label for="email-input">
+              <p>Endereço de email</p>
+              <input
+                type="email"
+                id="email-input"
+                name="email"
+                placeholder="Digite seu email"
+                required
+              />
+            </label>
+
+            <label for="password-input">
+              <p>Crie uma senha</p>
+              <input
+                type="password"
+                id="password-input"
+                name="password"
+                placeholder="Digite sua senha"
+                minlength="6"
+                required
+              />
+            </label>
+          </div>
+
+          <button type="submit">Entrar</button>
+
+          <p>
+            Não tem uma conta? Então faça um
+            <a href="../sign-up/index.html">Cadastro</a>
+          </p>
+        </div>
+      </form>
+    </main>
+
+    <div id="hero-image"></div>
+  </body>
+  <!-- 
+      ╱|、
+    (˚ˎ 。7  
+    |、˜〵          
+    じしˍ,)ノ
+  -->
+</html>

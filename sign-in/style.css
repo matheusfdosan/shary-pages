@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+:root {
+  --Light-Blue: #3b82f6;
+  --Dark-Blue: #234c90;
+  --Dark: #353535;
+  --White: #ffffff;
+  --Grayish-Blue: #9fabb2;
+  --Sora: "Sora", serif;
+  --Inter: "Inter", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100vh;
+  font-family: var(--Inter);
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: flex;
+  width: 100%;
+}
+
+#hero-image {
+  width: 50%;
+  background: var(--Grayish-Blue)
+    url(https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+    center/cover no-repeat;
+}
+
+main {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container {
+  width: 80%;
+  margin: auto;
+}
+
+#logo {
+  margin-bottom: 1.5rem;
+  font-family: var(--Sora);
+  font-size: 3rem;
+  font-weight: bold;
+  background-image: linear-gradient(
+    to left,
+    var(--Dark-Blue),
+    var(--Light-Blue)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  font-family: var(--Sora);
+  color: var(--Dark);
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+#container p {
+  color: var(--Grayish-Blue);
+  margin-bottom: 3rem;
+  font-size: 1.6rem;
+}
+
+#sign-in-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+#sign-in-fields p {
+  color: var(--Dark);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+label > input {
+  height: 4rem;
+  border: 1px solid var(--Grayish-Blue);
+  width: 100%;
+  border-radius: 2px;
+  padding-left: 1rem;
+  font-size: 1.6rem;
+  font-family: var(--Inter);
+}
+
+label > input::placeholder {
+  color: var(--Grayish-Blue);
+}
+
+button {
+  width: 100%;
+  padding: 1.5rem 0;
+  font-family: var(--Sora);
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: var(--White);
+  cursor: pointer;
+  background-color: var(--Light-Blue);
+  border: none;
+  border-radius: 2px;
+  margin-bottom: 2rem;
+}
+
+a {
+  color: var(--Light-Blue);
+  text-decoration: none;
+}
+
+@media (max-width: 769px) {
+  #hero-image {
+    width: 40%;
+  }
+
+  main {
+    width: 60%;
+  }
+}
+
+@media (max-width: 481px) {
+  #hero-image {
+    display: none;
+  }
+
+  main {
+    width: 100%;
+    margin: 25rem auto;
+  }
+
+  h1 {
+    font-size: 2.9rem;
+  }
+
+  .detail {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 100%;
+    position: absolute;
+  }
+}
