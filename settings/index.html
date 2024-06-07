@@ -105,7 +105,7 @@
         <div id="container">
           <h2>Configurações</h2>
 
-          <div id="edit-account">
+          <form action="/edit" id="edit-account">
             <h3>Editar perfil</h3>
 
             <label for="profile-picture-input">
@@ -141,7 +141,9 @@
                 <option>Prefiro não dizer</option>
               </select>
             </label>
-          </div>
+
+            <button type="submit" id="save-user-info">Salvar</button>
+          </form>
 
           <div id="account-settings">
             <h3>Configurações de Conta</h3>
