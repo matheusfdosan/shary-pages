@@ -192,6 +192,7 @@ main::-webkit-scrollbar-thumb {
   border: 0.2rem solid var(--White);
   border-radius: 1rem;
 }
+
 main #container h2 {
   color: var(--Dark);
 }
@@ -210,10 +211,9 @@ main #container {
 
 #edit-user-info {
   width: 100%;
-  text-align: end;
 }
 
-#edit-user-info > button {
+#edit-user-info > a > button {
   background-color: #3b83f683;
   border-radius: 100%;
   border: none;
@@ -221,6 +221,10 @@ main #container {
   height: 5rem;
   cursor: pointer;
   transition: transform 300ms ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
 }
 
 #edit-user-info > button > ion-icon {
@@ -384,6 +388,7 @@ main #container > h2 {
     background-color: transparent;
     border: none;
     padding-top: 1rem;
+    color: var(--Dark-Blue);
     cursor: pointer;
   }
 
@@ -421,16 +426,22 @@ main #container > h2 {
 }
 
 @media (max-width: 480px) {
+  html {
+    font-size: 58%;
+  }
+
   main {
     padding: 0;
   }
 
   main #container {
     border-radius: 0;
+    padding-bottom: 6rem;
   }
 
   #posts-container {
     grid-template-columns: 1fr;
+    width: 100%;
   }
 
   #info p {
