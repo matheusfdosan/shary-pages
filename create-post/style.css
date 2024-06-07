@@ -260,11 +260,13 @@ label[for="post-file-img"] > ion-icon {
   display: block;
   padding: 5rem;
   margin: auto;
+  font-size: 4rem;
+  color: var(--Grayish-Blue);
 }
 
 button {
-  padding: .5rem 2rem;
-  border-radius: .5rem;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
   border: none;
   background-color: var(--Light-Blue);
   color: var(--White);
@@ -277,8 +279,8 @@ button {
 #preview {
   display: none;
   max-width: 40rem;
-    border-radius: 1rem;
-    margin: 2rem 0;
+  border-radius: 1rem;
+  margin: 2rem 0;
 }
 
 #buttons {
@@ -287,7 +289,7 @@ button {
 }
 
 button:hover {
-  filter: drop-shadow(0 0 .3rem var(--Light-Blue));
+  filter: drop-shadow(0 0 0.3rem var(--Light-Blue));
 }
 
 #cancel-post {
