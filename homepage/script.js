@@ -9,7 +9,7 @@ document.querySelector("#close-bar").addEventListener("click", () => {
 
 /* Comments Modal open/close System*/
 document
-  .querySelector("#comments-like > button:nth-child(2)")
+  .querySelector(".post #comments-like > button:nth-child(2)")
   .addEventListener("click", () => {
     document.querySelector(".modal-comments").classList.add("active")
   })

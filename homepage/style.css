@@ -27,7 +27,7 @@ body {
   font-family: var(--Inter);
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 /* Default Settings */
@@ -307,16 +307,20 @@ main::-webkit-scrollbar-thumb {
   width: 85%;
   height: 100%;
   margin: auto;
+  padding: 4rem;
   overflow: hidden;
 }
 
 #close {
-  width: 95%;
-  padding: 2rem;
+  width: 100%;
+  padding-bottom: 2rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   background-color: transparent;
   border: none;
+  align-items: center;
+  color: var(--Dark);
+  font-family: var(--Inter);
 }
 
 #close > ion-icon {
@@ -335,9 +339,7 @@ main::-webkit-scrollbar-thumb {
   gap: 2rem;
   height: 80%;
   overflow-y: scroll;
-  width: fit-content;
-  margin: auto;
-  padding-bottom: 3rem;
+  align-items: flex-start;
 }
 
 #comments-container::-webkit-scrollbar {
@@ -353,11 +355,12 @@ main::-webkit-scrollbar-thumb {
 
 .comment {
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 1rem;
   font-size: 1.8rem;
   padding: 0.5rem 0;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .comment > img {
@@ -382,6 +385,48 @@ main::-webkit-scrollbar-thumb {
 #close-bar {
   display: block !important;
   cursor: pointer;
+}
+
+#leave-a-comment > form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid var(--Grayish-Blue);
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+#leave-a-comment > form > img {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+#leave-a-comment > form > input {
+  border: none;
+  border-bottom: 1px solid var(--Dark);
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 1rem .5rem;
+  font-family: var(--Inter);
+}
+
+#leave-a-comment > form > button {
+  border: none;
+  background-color: transparent;
+  padding-top: 1rem;
+  color: var(--Dark-Blue);
+  font-family: var(--Inter);
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter 200ms ease;
+}
+
+#leave-a-comment > form > button:hover {
+  filter: drop-shadow(0 0 0.3rem var(--Light-Blue));
 }
 
 @media (max-width: 830px) {
@@ -438,6 +483,7 @@ main::-webkit-scrollbar-thumb {
 
   main {
     width: 95%;
+    padding-bottom: 7rem;
   }
 
   .post > #post-header > img {
@@ -469,6 +515,7 @@ main::-webkit-scrollbar-thumb {
     background-color: transparent;
     border: none;
     padding-top: 1rem;
+    color: var(--Dark-Blue);
     cursor: pointer;
   }
 
@@ -503,6 +550,7 @@ main::-webkit-scrollbar-thumb {
     height: 100%;
     background-color: var(--White);
     overflow-y: scroll;
+    padding: 0;
   }
 
   .modal-comments.active::-webkit-scrollbar {
@@ -516,16 +564,8 @@ main::-webkit-scrollbar-thumb {
     border-radius: 1rem;
   }
 
-  #close {
-    width: 95%;
-    padding: 2rem;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  #close > ion-icon {
-    font-size: 3.5rem;
-    cursor: pointer;
+  .modal-comments.active #container {
+    width: 100%;
   }
 
   #comments-container {
@@ -537,7 +577,6 @@ main::-webkit-scrollbar-thumb {
   .comment {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 1rem;
     font-size: 1.8rem;
     padding: 0.5rem 0;
@@ -569,6 +608,10 @@ main::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 481px) {
+  html {
+    font-size: 52%;
+  }
+
   #post-description {
     flex-direction: column;
     align-items: self-start;
